@@ -14,9 +14,9 @@ namespace PizzaShop
           AbstractPizza pizza = new PlainPizza();
 
 
-            foreach (var s in ingrediensliste)
+            foreach (var ingredient in ingrediensliste)
             {
-                pizza = AddIngredients(s, pizza);
+                pizza = AddIngredients(ingredient, pizza);
             }
 
             return pizza;
@@ -28,17 +28,13 @@ namespace PizzaShop
             switch(ingredient.ToLower())
             {
                 case "ham":
-                    return new PlainPizza();
-                    break;
+                    return new HamDecorator(pizza);
                 case "bacon":
-                    Console.WriteLine("bacon");
-                    return new PlainPizza();
+                    return new BaconDecorator(pizza);
                 case "pepperoni":
-                    Console.WriteLine("pepperoni");
-                    return new PlainPizza();
+                    return new PepperoniDecorator(pizza);
                 default:
-                    return pizza;
-                    break;
+                    return new PlainPizza();
             }       
         }
     }
