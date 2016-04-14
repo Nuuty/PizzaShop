@@ -43,20 +43,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractPizza.cs" />
-    <Compile Include="AbstractPizzaDecorator.cs" />
-    <Compile Include="BaconDecorator.cs" />
-    <Compile Include="HamDecorator.cs" />
-    <Compile Include="IPizzaFactory.cs" />
-    <Compile Include="PepperoniDecorator.cs" />
-    <Compile Include="PizzaFactory.cs" />
-    <Compile Include="PlainPizza.cs" />
+    <Compile Include="Adapter\IMenu.cs" />
+    <Compile Include="Adapter\PizzaToMenuAdapter.cs" />
+    <Compile Include="Decorator\AbstractPizza.cs" />
+    <Compile Include="Decorator\AbstractPizzaDecorator.cs" />
+    <Compile Include="Decorator\BaconDecorator.cs" />
+    <Compile Include="Decorator\HamDecorator.cs" />
+    <Compile Include="Decorator\PepperoniDecorator.cs" />
+    <Compile Include="Factory\IPizzaFactory.cs" />
+    <Compile Include="Factory\PizzaFactory.cs" />
+    <Compile Include="Model\PlainPizza.cs" />
+    <Compile Include="Observer\IObservable.cs" />
+    <Compile Include="Observer\IObserver.cs" />
+    <Compile Include="Observer\PizzaMan.cs" />
+    <Compile Include="Observer\PizzaOven.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategy\EveningPriceStrategy.cs" />
+    <Compile Include="Strategy\IPriceStrategy.cs" />
+    <Compile Include="Strategy\LunchPriceStrategy.cs" />
+    <Compile Include="Strategy\NightPriceStrategy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
