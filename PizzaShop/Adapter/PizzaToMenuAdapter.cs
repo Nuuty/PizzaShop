@@ -8,10 +8,10 @@ namespace PizzaShop.Adapter
         public double MenuPrice { get; set; }
         public AbstractPizza Pizza { get; set; }
 
-        public PizzaToMenuAdapter(string drink, double menuPrice, AbstractPizza pizza)
+        public PizzaToMenuAdapter(string drink, double drinkPrice, AbstractPizza pizza)
         {
             Drink = drink;
-            MenuPrice = pizza.Price + menuPrice;
+            MenuPrice = pizza.Price + drinkPrice;
             Pizza = pizza;
         }
 

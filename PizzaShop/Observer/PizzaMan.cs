@@ -27,7 +27,7 @@ namespace PizzaShop.Observer
             Console.WriteLine($"{menu.Pizza}kr");
             if (menu.Drink != null)
             {
-                Console.WriteLine($"Served with {menu.Drink}");
+                Console.WriteLine($"Served with {menu.Drink} at the cost of {menu.MenuPrice-menu.Pizza.Price}kr");
             }
             double price = 0;
             switch (DayTime)
@@ -36,7 +36,7 @@ namespace PizzaShop.Observer
                 case TimeOfDay.Lunch: price = LunchPriceStrategy.CalculatePrice(menu); break;
                 case TimeOfDay.Night: price = NightPriceStrategy.CalculatePrice(menu); break;
             }
-            Console.WriteLine($"With a total cost of {price}");
+            Console.WriteLine($"Since it's {DayTime} the price is increased by 10% and the total cost is {price}kr");
             
         }
 

@@ -5,6 +5,6 @@ namespace PizzaShop.Observer
 {
     interface IObserver
     {
-        void Notify(IMenu Menu);
+        void Notify(IMenu menu);
     }
 }
