@@ -4,6 +4,6 @@ namespace PizzaShop.Strategy
 {
     interface IPriceStrategy
     {
-        void CalculatePrice(IMenu menuprice);
+        double CalculatePrice(IMenu pizzamenu);
     }
 }

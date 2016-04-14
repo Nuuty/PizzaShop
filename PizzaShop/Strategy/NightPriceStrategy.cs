@@ -4,9 +4,9 @@ namespace PizzaShop.Strategy
 {
     class NightPriceStrategy : IPriceStrategy
     {
-        public void CalculatePrice(IMenu menuprice)
+        public double CalculatePrice(IMenu pizzamenu)
         {
-            throw new System.NotImplementedException();
+            return pizzamenu.MenuPrice*1.1;
         }
     }
 }

@@ -11,7 +11,7 @@ namespace PizzaShop.Adapter
         public PizzaToMenuAdapter(string drink, double menuPrice, AbstractPizza pizza)
         {
             Drink = drink;
-            MenuPrice = menuPrice;
+            MenuPrice = pizza.Price + menuPrice;
             Pizza = pizza;
         }
 
