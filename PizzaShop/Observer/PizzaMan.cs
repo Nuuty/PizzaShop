@@ -14,6 +14,7 @@ namespace PizzaShop.Observer
         public IPriceStrategy LunchPriceStrategy = new LunchPriceStrategy();
         public IPriceStrategy NightPriceStrategy = new NightPriceStrategy();
         public TimeOfDay DayTime { get; set; }
+        public enum TimeOfDay { Lunch, Evening, Night };
 
         public PizzaMan(PizzaOven pizzaOven)
         {
@@ -50,7 +51,7 @@ namespace PizzaShop.Observer
             var pizza = PizzaFactory.MakePizza(ingredients);
             PizzaOven.PreparePizza(new PizzaToMenuAdapter(drink, price, pizza));
         }
-        public enum TimeOfDay { Lunch, Evening, Night };
+        
 
 
 
